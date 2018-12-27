@@ -1,11 +1,29 @@
+<script>
+function isPlaying(audio) { return !audio.paused;}
+
+var audio_racecar1 = new Audio("car_sounds\\racecar1.mp3");
+
+var audio = {
+	'racecar1' : new Audio("car_sounds\\racecar1.mp3"),
+	'firetruck1' : new Audio("car_sounds\\firetruck1.mp3")
+}
+
+function playSound(audioVariable) {
+	if (isPlaying(audioVariable)) {
+		audioVariable.pause();
+		console.log("pause");
+	} else {
+		audioVariable.play();
+		console.log("play");
+	}
+}
+
+</script>
+
 <center>
-<audio id="racecar1" src="car_sounds\racecar1.mp3"></audio>
-<button onclick="document.getElementById('racecar1').play()"><img src="car_pictures\racecar1.png" width="250" height="100"></button>
+<button id ="racecar1_button" onclick="playSound(audio.racecar1);"><img src="car_pictures\racecar1.png" width="100%" height="20%"></button>
 <p>
-<button onclick="document.getElementById('racecar1').pause()">STOP</button>
 <p>
-<audio id="firetruck1" src="car_sounds\firetruck1.mp3"></audio>
-<button onclick="document.getElementById('firetruck1').play()"><img src="car_pictures\firetruck1.jpg" width="250" height="100"></button>
+<button onclick="playSound(audio.firetruck1);"><img src="car_pictures\firetruck1.jpg" width="100%" height="20%"></button>
 <p>
-<button onclick="document.getElementById('firetruck1').pause()">STOP</button>
 </center>

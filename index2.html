@@ -1,0 +1,19 @@
+ <script>
+var clickState = 0;
+var btn = document.querySelector('.button-elem');
+
+btn.addEventListener('click', function(){
+
+  if (clickState == 0) {
+    // code snippet 1
+    this.textContent = 'State 2';
+    clickState = 1;
+  } else {
+    // code snippet 2
+    this.textContent = 'State 1';
+    clickState = 0;
+  }
+
+});
+
+</script>
