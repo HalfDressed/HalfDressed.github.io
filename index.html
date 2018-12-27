@@ -1,8 +1,6 @@
 <script>
 function isPlaying(audio) { return !audio.paused;}
 
-var audio_racecar1 = new Audio("car_sounds\\racecar1.mp3");
-
 var audio = {
 	'racecar1' : new Audio("car_sounds\\racecar1.mp3"),
 	'firetruck1' : new Audio("car_sounds\\firetruck1.mp3")
@@ -20,10 +18,25 @@ function playSound(audioVariable) {
 
 </script>
 
-<center>
-<button id ="racecar1_button" onclick="playSound(audio.racecar1);"><img src="car_pictures\racecar1.png" width="100%" height="20%"></button>
-<p>
-<p>
-<button onclick="playSound(audio.firetruck1);"><img src="car_pictures\firetruck1.jpg" width="100%" height="20%"></button>
-<p>
-</center>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 60%; text-align: center;"><button id ="racecar1_button" onclick="playSound(audio.racecar1);"><img src="car_pictures\racecar1.png" width="100%" height="auto"></button>
+</td>
+<td style="width: 20%; text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="width: 20%; text-align: center;"></td>
+<td style="width: 60%; text-align: center;"><button id ="fireTruck1_button" onclick="playSound(audio.firetruck1);"><img src="car_pictures\firetruck1.jpg" width="100%" height="auto"></button>
+</td>
+<td style="width: 20%; text-align: center;"></td>
+</tr>
+</tbody>
+</table>
